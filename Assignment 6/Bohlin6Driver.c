@@ -5,8 +5,8 @@
 // Author's Email: jeffdbx@gmail.com
 // Purpose: This is the driver for 'Bohlin6.asm'.  Very simply, it calls 'Bohlin6.asm' and then outputs the 
 //          resulting return code after the program is done executing. This will serve as a generic
-//      driver for all assembly projects in this class. A full description of what this program
-//      accomplishes can be found in 'Bohlin6.asm'.
+//          driver for all assembly projects in this class. A full description of what this program
+//          accomplishes can be found in 'Bohlin6.asm'.
 //
 // Compile: 
 //  gcc -c -m64 Bohlin6Driver.c

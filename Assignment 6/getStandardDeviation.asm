@@ -6,7 +6,7 @@
 ; File: getStandardDeviation.asm
 ; Author's Email: jeffdbx@gmail.com
 ; Purpose:  This module computes th standard deviation of values within an array. This is simply 
-            the square root of the variance.
+;           the square root of the variance.
 ;
 ; Allocation of registers:
 ;

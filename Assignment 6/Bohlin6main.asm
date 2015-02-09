@@ -297,12 +297,12 @@ mainASM:
 ;======================================================================================
 ;
 ; NOTE: In this previous step, "mov rdi, variance", I chose to pass the address of the
-;   variance to getStandardDeviation.  Normally, I should have passed the value
-;   via xmm0, but after trying multiple times to retrieve the value from xmm0
-;   inside of the getStandardDeviation module, it would not work.  I kept getting
-;   garbage.  So, in the interest of my sanity and to save time I had to find an
-;   alternative method.  Whether or not this is acceptable is for you to decide,
-;   Professor, but the problem was solved none-the-less!
+;       variance to getStandardDeviation.  Normally, I should have passed the value
+;       via xmm0, but after trying multiple times to retrieve the value from xmm0
+;       inside of the getStandardDeviation module, it would not work.  I kept getting
+;       garbage.  So, in the interest of my sanity and to save time I had to find an
+;       alternative method.  Whether or not this is acceptable is for you to decide,
+;       Professor, but the problem was solved none-the-less!
 ;
 ;======================================================================================
 
