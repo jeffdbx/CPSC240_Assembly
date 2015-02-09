@@ -31,7 +31,7 @@ segment .data                           ; Initialized data
     msgRem          db "The remainder is ", 0
     msgInt          db " (signed decimal) = ", 0
     msgHex          db " (unsigned hex)", 10, 0    
-    msgOverflow     db "The product requires more than 64 bits. It's value is: ", 10, 0    
+    msgOverflow     db "The product requires more than 64 bits. Its value is: ", 10, 0    
     msgBye          db "I hope you enjoyed using my program as much as I enjoyed making it. Bye!", 10, 0    
     stringFormat    db "%s", 0    
     intFormat       db "%lld", 0
