@@ -7,9 +7,9 @@
 ; Author's Email: jeffdbx@gmail.com
 ; 
 ; Purpose: This program takes 3 sides of a triangle (inputted from the user) and then use's Heron's Formula to
-;      calculate the area.  The formula is:  Area = sqrt( s(s-a)(s-b)(s-c) )  Where 's' is the semiperimeter.
-;      All number storage and calculations are done within the x87 FPU registers (st0, st1, etc.) in order
-;      to maintain high precision.  
+;          calculate the area.  The formula is:  Area = sqrt( s(s-a)(s-b)(s-c) )  Where 's' is the semiperimeter.
+;          All number storage and calculations are done within the x87 FPU registers (st0, st1, etc.) in order
+;          to maintain high precision.  
 ;
 ; Allocation of registers:
 ;   
@@ -68,8 +68,7 @@ segment .text                               ; Begin executable code
 global mainASM
 mainASM:
 
-; Safe programming practice: Save the registers that may be used
-;   during this program.
+; Safe programming practice: Save the registers that may be used during this program.
 
     push    rdi
     push    rsi
@@ -123,7 +122,8 @@ startLoop:
 ;======================================================================================
 ; 
 ; NOTE: 
-;       For these next steps, in order to print the decimal form of Side 1, I need
+;
+;   For these next steps, in order to print the decimal form of Side 1, I need
 ;   to first pop Side 1 into memory (for some reason I was having issues with the xmm0
 ;   register to print out the float in decimal form. It seems that simply sending
 ;   "%19.20llf" to printf works [as far as I can tell]).  However, I would still 
@@ -131,7 +131,7 @@ startLoop:
 ;   Using 'fst' won't work in this case (it brings up an error when trying  to assemble). 
 ;   So 'fstp' must be used instead which will pop Side 1 out of st0.
 ;
-;       The solution to this problem is to pop (from st0) Side 1 onto the integer stack,                            
+;   The solution to this problem is to pop (from st0) Side 1 onto the integer stack,                            
 ;   and then immediately re-push it back into st0. Notice that doing it this way keeps
 ;   a copy of Side 1 in both st0 and the integer stack.
 ;
@@ -310,9 +310,9 @@ showregisters 1
 ;       Heron's formula calculates the area of a triangle:
 ;       Area = sqrt( s(s-a)(s-b)(s-c) )
 ;
-;   Where 's' is the semiperimeter and 'a', 'b', 'c' are the sides of the triangle.
+;  Where 's' is the semiperimeter and 'a', 'b', 'c' are the sides of the triangle.
 ;
-;   In order to do this I have to perform the operations in small steps and shuffle
+;  In order to do this I have to perform the operations in small steps and shuffle
 ;  values up and down the floating point stack (AKA a nightmare). I will conduct the                            
 ;  steps according to the normal order of mathematical operations. The order of the steps
 ;  is as follows:
