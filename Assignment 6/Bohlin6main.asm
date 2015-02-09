@@ -5,7 +5,7 @@
 ; Due: 2012-May-10
 ; File: Bohlin6main.asm
 ; Author's Email: jeffdbx@gmail.com
-; Purpose:  This program practices inputting/outputting arrays as well has peforming various mathematical operations   
+; Purpose:  This program practices inputting/outputting arrays as well has performing various mathematical operations   
 ;           on them. The following tasks are executed:
 ;   
 ;       1) Prompts the user to input data for two floating point arrays.
