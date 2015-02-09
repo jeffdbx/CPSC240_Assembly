@@ -153,8 +153,8 @@ startLoop:
     push    rax                             ; Push 64 zeros onto the stack to clear room for input (push #1)
     push    rax                             ; Push another 64 zeros for a total of 128 bits of clean space (push #2)
 
-    fld     tword [side1]                   ; Push Side 1 onto the st stack (st0), (this must be done first in order to get the 
-                                            ;    data into rsp.  ("push tword [side1]" does not assemble.
+    fld     tword [side1]                   ; Push Side 1 onto the st stack (st0), (this must be done first in order to  
+                                            ;    get the data into rsp.  ("push tword [side1]" does not assemble.
     fstp    tword [rsp]                     ; Pop Side 1 onto the integer stack
 
 showregisters 1
@@ -212,8 +212,8 @@ showregisters 1
     push    rax                             ; Push 64 zeros onto the stack to clear room for input (push #1)
     push    rax                             ; Push another 64 zeros for a total of 128 bits of clean space (push #2)
 
-    fld     tword [side2]                   ; Push Side 2 onto the st stack (st0), (this must be done first in order to get the 
-                                            ;    data into rsp.  ("push tword [side2]" does not assemble.
+    fld     tword [side2]                   ; Push Side 2 onto the st stack (st0), (this must be done first in order to  
+                                            ;    get the data into rsp.  ("push tword [side2]" does not assemble.
     fstp    tword [rsp]                     ; Pop the Side 2 onto the integer stack
 
     mov     qword rax, 0                    ; No vector registers used, zero is the number of variant parameters    
@@ -260,14 +260,14 @@ showregisters 1
 
 ; Output Side 3 of the triangle
 
-                                            ; [The same steps that were used to print Side 1 and Side 2 must be done here as well.]                             
-                                            ;  Refer to the NOTE back with Side 1.]
+                                            ; [The same steps that were used to print Side 1 and Side 2 must be done                               
+                                            ;  here as well. Refer to the NOTE back with Side 1.]
     mov     qword rax, 0
     push    rax                             ; Push 64 zeros onto the stack to clear room for input (push #1)
     push    rax                             ; Push another 64 zeros for a total of 128 bits of clean space (push #2)
 
-    fld     tword [side3]                   ; Push Side 3 onto the st stack (st0), (this must be done first in order to get the 
-                                            ;    data into rsp.  ("push tword [side2]" does not assemble.
+    fld     tword [side3]                   ; Push Side 3 onto the st stack (st0), (this must be done first in order to  
+                                            ;    get the data into rsp.  ("push tword [side2]" does not assemble.
     fstp    tword [rsp]                     ; Pop Side 3 onto the integer stack
 
     mov     qword rax, 0                    ; No vector registers used, zero is the number of variant parameters    
@@ -357,7 +357,7 @@ showregisters 1
     fmul                                    ; Multiply (s-a) times (s-b) and store the result in st0
     fld     tword [semiMinusC]              ; Push (s-c) onto the st stack bumping the previous product into st1
     fmul                                    ; Multiply (s-c) times the product of (s-a)(s-b) and store the result in st0
-    fld     tword [semiPerimeter]           ; Push the semiperimeter onto the st stack bumping the previous product into st1
+    fld     tword [semiPerimeter]           ; Push the semiperimeter onto the st stack bumping the previous product to st1
     fmul                                    ; Multiply the semiperimeter times the product of (s-a)(s-b)(s-c)
     fstp    tword [radicand]                ; The final result is the radicand. Save this for later.
     fld     tword [radicand]                ; Push the radicand back onto the st stack (st0)
@@ -366,7 +366,7 @@ showregisters 1
     push    rax                             ; Push 64 zeros onto the integer stack
     push    rax                             ; Push another 64 zeros onto the integer stack (effectively making it 128bit)
     
-    fld     tword [rsp]                     ; Push zeros into st(0) in order to compare it with the radicand in the next step
+    fld     tword [rsp]                     ; Push zeros into st(0) to compare it with the radicand in the next step
     
     fcom                                    ; Compare st(0) and st(1)
     fstsw   ax                              ; These next two commands copy the FPU flags into the 64 bit rflags register.
