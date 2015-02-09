@@ -42,20 +42,20 @@ addvectors:
 
 ; Safe programming practice.  Save all registers (except rax) onto the stack as a precaution.
 
-    push rbx
-    push rcx
-    push rdx
-    push rdi
-    push rsi
-    push rbp
-    push r8
-    push r9
-    push r10
-    push r11
-    push r12
-    push r13
-    push r14
-    push r15
+    push    rbx
+    push    rcx
+    push    rdx
+    push    rdi
+    push    rsi
+    push    rbp
+    push    r8
+    push    r9
+    push    r10
+    push    r11
+    push    r12
+    push    r13
+    push    r14
+    push    r15
 ;
 
     mov     r13, rdi                    ; Store the address of firstIntArray in r13
@@ -87,20 +87,20 @@ doAddition:
 
 ; Restore all registers back to their original state.
 
-    pop r15
-    pop r14
-    pop r13
-    pop r12
-    pop r11
-    pop r10
-    pop r9
-    pop r8
-    pop rbp
-    pop rsi
-    pop rdi
-    pop rdx
-    pop rcx
-    pop rbx
+    pop     r15
+    pop     r14
+    pop     r13
+    pop     r12
+    pop     r11
+    pop     r10
+    pop     r9
+    pop     r8
+    pop     rbp
+    pop     rsi
+    pop     rdi
+    pop     rdx
+    pop     rcx
+    pop     rbx
 
     ret                                 ; End module
 
