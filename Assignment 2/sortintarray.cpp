@@ -18,7 +18,7 @@ extern "C" void sortintarray(long int arr[], int n);
 
 // Definition:
 // Note: Because I am using qwords in assembly, I MUST use long integers in arr[] here.  Before, I had
-//  only specified 'int arr[]' and each time I would have an error.
+//       only specified 'int arr[]' and each time I would have an error.
 
 // Bubblesort.  Not the best, but simple.
 void sortintarray(long int arr[], int counter)
