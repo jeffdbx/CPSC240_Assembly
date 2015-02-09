@@ -8,10 +8,10 @@
 //
 // NOTE: Professor Holliday's "triangle.c" file was used as a template 
 // Compile: 
-// 	gcc -c -m64 Bohlin1Driver.c
+//  gcc -c -m64 Bohlin1Driver.c
 //
 // Link with Assembly file: 
-//	gcc -m64 -o Bohlin1 Bohlin1.o Bohlin1Driver.o
+//  gcc -m64 -o Bohlin1 Bohlin1.o Bohlin1Driver.o
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,7 +20,8 @@ extern unsigned long int welcome();
 
 int main()
 {
-    unsigned long int result = 1;   // Need to find out how to print the real result code
+    // Need to find out how to print the real result code
+    unsigned long int result = 1;   
     printf("\n");
     printf("%s\n", "Welcome to Jeff's Arithmetic assignment!");
     result = welcome();
