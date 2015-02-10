@@ -6,13 +6,14 @@
 ; File: Bohlin5.asm
 ; Author's Email: jeffdbx@gmail.com
 ; 
-; Purpose:  This program determines the amount of time (in nanoseconds) that my 2.1Ghz computer can calculate 
-;           the harmonic sum ≥ x, where x is a non-zero float entered by the user.  See the note below that 
-;           describes how to calculate a harmonic sum in greater detail.
+; Purpose:  
+;   This program determines the amount of time (in nanoseconds) that my 2.1Ghz computer can calculate 
+;   the harmonic sum ≥ x, where x is a non-zero float entered by the user.  See the note below that 
+;   describes how to calculate a harmonic sum in greater detail.
 ;
 ; Acknowledgements: 
-            Thanks to Flavio De Pucol and Professor Holliday for the software 
-;           that prints a floating point number to 80-bit precision.
+;   Thanks to Flavio De Pucol and Professor Holliday for the software 
+;   that prints a floating point number to 80-bit precision.
 ;
 ; Allocation of registers:
 ;   
